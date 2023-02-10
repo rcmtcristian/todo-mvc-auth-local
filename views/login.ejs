@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <% if (locals.messages.info) { %>
-        <% messages.info.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
-    </form>
-</body>
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+  <body>
+    <section class="main--section">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Signup</a></li>
+            <li><a href="/">Home</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+      <div class="alert alert-danger"><%= el.msg %></div>
+      <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+      messages.info.forEach( el => { %>
+      <div class="alert alert-danger"><%= el.msg %></div>
+      <% }) %> <% } %>
+      <div class="container">
+        <div class="form-panel">
+          <h1>Login</h1>
+          <form action="/login" method="POST">
+            <div class="form-control">
+              <input type="email" name="email" required />
+              <label>Email</label>
+            </div>
+            <div class="form-control">
+              <input type="password" name="password" required />
+              <label>Password</label>
+            </div>
+            <input class="btn" type="submit" />
+            <p class="text">
+              Don't have an account? <a href="/signup">Register</a>
+            </p>
+          </form>
+        </div>
+        <div class="picture-panel"></div>
+      </div>
+    </section>
+  </body>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> -->
+  <script src="../formanimation.js"></script>
 </html>

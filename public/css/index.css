@@ -1,0 +1,173 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  color: #403832;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: giselle;
+  font-weight: 400;
+  src: url(https://www.display.care/static/fonts/FHGiselle-Regular.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: giselle;
+  font-weight: 600;
+  src: url(https://www.display.care/static/fonts/FHGiselle-Medium.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: giselle;
+  font-weight: 800;
+  src: url(https://www.display.care/static/fonts/FHGiselle-Bold.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: gilroy;
+  font-weight: 600;
+  src: url(https://www.display.care/static/fonts/Gilroy-Medium.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: gilroy;
+  font-weight: 800;
+  src: url(https://www.display.care/static/fonts/Gilroy-Bold.woff2)
+    format("woff2");
+}
+
+.main--section {
+  height: 90vh;
+  width: 100vw;
+  background-color: #f7e9d6;
+}
+
+header {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+
+a {
+  color: #776f66;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  font-size: 0.8rem;
+}
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #524b4b;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}
+
+.separator {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  margin-top: 19%;
+}
+
+.subMain--section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  height: 100%;
+  width: 85%;
+  align-items: center;
+  margin-top: -9em;
+}
+
+svg {
+  height: 50%;
+  width: 7%;
+  margin: 0em 1em 0em 1em;
+}
+
+.hero--title {
+  margin-left: 12em;
+}
+
+#title--shaping {
+  font-family: giselle;
+  font-weight: 600;
+  font-size: 8rem;
+  color: #403832;
+  margin-bottom: 0.5em;
+}
+#title--care {
+  font-family: giselle;
+  font-weight: 600;
+  font-size: 8rem;
+  color: #403832;
+  margin-bottom: 0.5em;
+  margin-left: 0.2em;
+}
+
+.subSecond--section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  margin-top: 2em;
+}
+.subSecond--section p {
+  height: 100%;
+  width: 50%;
+}
