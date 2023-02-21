@@ -89,11 +89,13 @@ input {
   background: url("../images/1675985503892.png");
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(5px);
+  filter: blur(2px);
+  width: 50vw;
 }
 
 .form-panel {
   padding: 10vh 5vw;
+  width: 50vw;
 }
 
 .form-panel h1 {
